@@ -20,6 +20,7 @@ This creates a set of API endpoints that allows the user to get all their reques
 * Flask
 * Pylint
 * Travis.CL
+* coveralls
 
 # Aurthors
 [Nazirini Siraji](https://github.com/hansuMbale/challenge-Two)
