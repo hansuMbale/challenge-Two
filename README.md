@@ -1,4 +1,4 @@
-# challenge-Two
+# challenge-Two [![Build Status](https://travis-ci.org/hansuMbale/challenge-Two.svg?branch=master)](https://travis-ci.org/hansuMbale/challenge-Two)
 This creates a set of API endpoints that allows the user to get all their requests, get a specific request, create and modify a request and use data structures to store data in memory.
 
 # Prerequisites:
