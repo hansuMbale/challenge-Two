@@ -2,28 +2,21 @@ language: python
 
 python:
   -3.4.5
+
+# command to create virtual venv
+- python -m venv venv
+
+# command to activate virtual venv
+- myvenv\Scripts\activate
+
+
 # command to install dependencies
+install:
+  - pip install -r requirements.txt
+        
+# command to run tests
+script: 
+  - python -m unittest
 
-- Create virtual environment
-```
-python -m venv myvenv
-```
-- Activate Virtual environment
-```
-myvenv\Scripts\activate
-```
+  after_success: coveralls
 
-- Install requirements
-```
-pip install -r requirements.txt
-```
-
-## Running the application
-```
-python request.py
-```
-
-## Running the tests
-```
-python -m unittest
-```

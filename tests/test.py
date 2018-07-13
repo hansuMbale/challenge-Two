@@ -25,21 +25,27 @@ class BaseTestCase(unittest.TestCase):
 
 
 
-class ApiTestcase(BaseTestCase):
+class RequestTestCase(BaseTestCase):
     
+    def test_create_request(self):
     
-    def test_can_fetch_users(self):
-        response = self.test_client.get('/nazirini/api/v1.0/details')
-        self.assertEqual(response.status_code, 200 )
-        self.assertIn("users", response.data.decode())
-    
-
-    def test_can_create_user(self):
-        user_data = json.dumps(self.user)
-        response = self.test_client.post('/nazirini/api/v1.0/details', data=user_data, content_type=self.content_type)
+        response = self.test_client.post('/nazirini/api/v1.0/details', data=json.dumps(self.request_data), content_type = 'application/json')
         self.assertEqual(response.status_code, 201)
-        response_data = json.loads(response.data.decode())
-        self.assertEqual(self.user, response_data.get('user'))
+        self.assertIn("Request has been created",str(response.data))
 
+      
+
+    def test_get_all_requests(self):
+       
+        response = self.test_client.post('/nazirini/api/v1.0/details', data=json.dumps(self.request_data), content_type = 'application/json')
+        response = self.test_client.get('/nazirini/api/v1.0/details', data=json.dumps(self.request_data), content_type = 'application/json')
+        self.assertEqual(response.status_code, 302)
+          
+    def test_get_single_request(self):
+       
+        response = self.test_client.get('/nazirini/api/v1.0/details/1', data=json.dumps(self.request_data), content_type = 'application/json')
+        self.assertEqual(response.status_code, 200)
+
+                
     if __name__ == '__main__':
         unittest.main()
