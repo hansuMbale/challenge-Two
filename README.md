@@ -1,5 +1,6 @@
 # challenge-Two
 ## [![Build Status](https://travis-ci.org/hansuMbale/challenge-Two.svg?branch=test)](https://travis-ci.org/hansuMbale/challenge-Two)
+[![Coverage Status](https://coveralls.io/repos/github/hansuMbale/challenge-Two/badge.svg?branch=master)](https://coveralls.io/github/hansuMbale/challenge-Two?branch=master)
 This creates a set of API endpoints that allows the user to get all their requests, get a specific request, create and modify a request and use data structures to store data in memory.
 
 # Prerequisites:
