@@ -1,9 +1,6 @@
 from flask import Flask
-import json 
-
-import unittest
-from data import BaseTestCase
-app = Flask(__name__)
+import unittest, json
+from .data import BaseTestCase
 
 
 class RequestTestCase(BaseTestCase):
