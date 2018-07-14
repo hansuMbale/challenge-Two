@@ -15,7 +15,7 @@ details = [
         'phone': u'536780',
         'department': u'Team Lead',
         'computerID': u'AAA53',
-        'description': u'Screen freezes when handing heavy apps',
+        'description': u'Screen freezes when handling heavy apps',
         'done': False
     },
     {
@@ -26,6 +26,27 @@ details = [
         'department': u'Facilitors',
         'computerID': u'875TRH',
         'description': u'Key board shortcuts not working',
+        'done': False
+    }
+
+     {
+        'id': 3,
+        'fullname': u'papa ',
+        'email': u'papa@gmail.com',
+        'phone': u'3565362',
+        'department': u'Student',
+        'computerID': u'KKe5u',
+        'description': u'No more space in the hard drive',
+        'done': False
+    },
+    {
+        'id': 4,
+        'fullname': u'hadija',
+        'email': u'had@gmail.com',
+        'phone': u'015918',
+        'department': u'Coordinations',
+        'computerID': u'52879',
+        'description': u'Screen takes long to start',
         'done': False
     }
 ]
