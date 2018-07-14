@@ -76,10 +76,8 @@ def update_request(detail_id):
     detail[0]['email'] = request.get_json().get('email', detail[0]['email'])
     detail[0]['phone'] = request.get_json().get('phone', detail[0]['phone'])
     detail[0]['department'] = request.get_json().get('department', detail[0]['department'])
-    detail[0]['computerID'] = request.get_json().get(
-        'computerID', detail[0]['computerID'])
-    detail[0]['description'] = request.get_json().get(
-        'description', detail[0]['description'])
+    detail[0]['computerID'] = request.get_json().get('computerID', detail[0]['computerID'])
+    detail[0]['description'] = request.get_json().get('description', detail[0]['description'])
     detail[0]['done'] = request.get_json().get('done', detail[0]['done'])
     return jsonify({'detail': detail[0]})
 

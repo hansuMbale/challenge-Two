@@ -3,20 +3,13 @@ language: python
 python:
   -3.4.5
 
-# command to create virtual venv
-- python -m venv venv
-
-# command to activate virtual venv
-- myvenv\Scripts\activate
-
-
 # command to install dependencies
 install:
   - pip install -r requirements.txt
         
 # command to run tests
 script: 
-  - python -m unittest
-
-  after_success: coveralls
+  - nosetests --with-coverage
+  
+after_success: coveralls
 
