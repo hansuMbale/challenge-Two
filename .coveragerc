@@ -22,3 +22,4 @@ omit =
     *fileinput.py*
     *typing.py*
     *_bootlocale.py*
+    *home/*
