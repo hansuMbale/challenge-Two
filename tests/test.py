@@ -44,8 +44,8 @@ class RequestTestCase(BaseTestCase):
         response = self.test_client.get('/nazirini/api/v1.0/details/1', data=json.dumps(self.request), content_type = 'application/json')
         self.assertEqual(response.status_code, 404)
 
-    def test_cant_create_a_user(self):
-        invalid_user = json.dumps({"fullname":"nazirini", "email":"hansu@gmail.com", "phone":"536780","department":"Team Lead","computerID":"AAA53","description":"screen freezes when handling heavy apps"})
+    def test_cant_create_a_request(self):
+        invalid_user = json.dumps({"fullname":"nazirini",  "phone":"536780","computerID":"AAA53","description":"screen freezes when handling heavy apps"})
         response = self.test_client.post('/nazirini/api/v1.0/details', data=invalid_user, content_type=self.content_type)
         self.assertTrue(response.status_code == 404)
 
